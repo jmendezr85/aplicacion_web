@@ -36,6 +36,15 @@ updateProduct = async (req, res) => {
     }
 }
 
+handleChange = (e) => {
+    this.setState({
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
 module.exports = Object.freeze({
     getAllProducts,
     addProduct,
