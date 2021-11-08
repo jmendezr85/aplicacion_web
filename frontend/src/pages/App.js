@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Form, Button, Table} from "react-bootstrap";
 import {useState, useEffect} from "react";
 import Axios  from "axios";
+import logo from "../media/logo_trans2.png";
 
 function App() {
 
@@ -56,8 +57,9 @@ function App() {
     <div className="App">
       <Container>
         <h1>
-          CRUD - PRODUCTOS
+          PRODUCTOS - WARMYS
         </h1>
+        <a href="/" ><img src={logo}  width="60px"/></a>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicBarcode">
             <Form.Label>Codigo de barras</Form.Label>
@@ -231,6 +233,10 @@ function App() {
             ACTUALIZAR
           </Button>
         </Form>
+
+        
+      
+     
 
 
 

@@ -1,9 +1,9 @@
 import "../estilos/Principal.css";
 import logo2 from "../media/logo_tienda.png";
 import { Link } from "react-router-dom";
-import React, { Fragment,} from "react";
+import React, { Fragment } from "react";
 
-function Login() {
+function Registro() {
   return (
     <Fragment>
       <div className="fondologin">
@@ -15,11 +15,21 @@ function Login() {
 
             <div className="container">
               <label for="uname">
-                <b>Usuario</b>
+                <b>Nuevo Usuario</b>
               </label>
               <input
                 type="text"
-                placeholder="Ingresa el usuario"
+                placeholder="Ingresa el nuevo usuario"
+                name="uname"
+                required
+              />
+
+              <label for="email">
+                <b>Correo Electónico</b>
+              </label>
+              <input
+                type="text"
+                placeholder="Ingresa tu correo electrónico"
                 name="uname"
                 required
               />
@@ -33,33 +43,38 @@ function Login() {
                 name="psw"
                 required
               />
-
+              <div>
+                <label>
+                  <b>Selecciona tu Rol</b>
+                </label>
+                <input
+                  class="oc"
+                  type="radio"
+                  id="vendedor"
+                  name="mi_rol"
+                  value="Vendedor"
+                />
+                <label class="oc"> Vendedor</label>
+                <input
+                  class="oc"
+                  type="radio"
+                  id="administrador"
+                  name="mi_rol"
+                  value="Administrador"
+                />
+                <label class="oc"> Administrador</label>
+              </div>
               <button type="submit" id="logearse">
-                Loguearse
+                Registrarse
               </button>
-
-              <label>
-                <input type="checkbox" checked="checked" name="remember" />{" "}
-                Recordarme
-              </label>
-              <label>
-                <span className="oc">
-                  {" "}
-                  <a href="#">Olvidaste la Contraseña?</a>
-                </span>
-              </label>
             </div>
 
             <div className="container" className="abajo">
               <Link to="/">
-                <button type="button" class="cancelbtn">
-                  Regresar
+                <button type="button" className="cancelbtn">
+                  Cancelar
                 </button>
               </Link>
-              <span className="psw">
-                {" "}
-                <Link to="/registro">Registrarse</Link>
-              </span>
             </div>
           </form>
         </div>
@@ -73,4 +88,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Registro;
