@@ -243,6 +243,14 @@ li a:hover{
   color: #db3541;
 }
 
+.gmail{
+  width: 100%;
+  position: relative;
+  margin: 10px;
+  margin-left: 0px;
+  
+}
+
 h2{
   color: #db3541;
   text-align: left;

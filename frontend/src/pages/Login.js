@@ -1,9 +1,17 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "../estilos/Principal.css";
 import logo2 from "../media/logo_tienda.png";
 import { Link } from "react-router-dom";
 import React, { Fragment,} from "react";
+import  GoogleLogin  from  'react-google-login' ;
 
 function Login() {
+  const respuestaGoogle = (respuesta) => {
+    console.log(respuesta);
+    
+  }
+
   return (
     <Fragment>
       <div className="fondologin">
@@ -61,7 +69,20 @@ function Login() {
                 <Link to="/registro">Registrarse</Link>
               </span>
             </div>
+            <div >
+          <GoogleLogin 
+                clientId="496654533117-1ck3nsdvtiqiabnvkjcsqavke8jfpt0e.apps.googleusercontent.com"
+                buttonText="iniciar sesion" 
+                onSuccess={respuestaGoogle}
+                onFailure={respuestaGoogle}
+                cookiePolicy={'single_host_origin'}
+                className="gmail"
+                
+                
+              />,
+          </div>
           </form>
+          
         </div>
       </div>
       <footer className="piedepagina">
@@ -70,6 +91,8 @@ function Login() {
         </div>
       </footer>
     </Fragment>
+
+    
   );
 }
 
