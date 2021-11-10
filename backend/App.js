@@ -24,5 +24,7 @@ mongoose.connect(uri, option)
 const {product_routes} = require('./routes');
 app.use('/api/v1/product', product_routes);
 
+
+
 //Pongamos al servidor a escuchar
 app.listen(process.env.PORT, () =>{console.log("Estoy a tu servicio en el puerto "+process.env.PORT)});
