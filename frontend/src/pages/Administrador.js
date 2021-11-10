@@ -63,12 +63,7 @@ function Administrador() {
   );
 }
 
-function Prueba() {
-  return (
-    <div>
-      <img src={logo2} alt="Avatar" class="avatar" />
-    </div>
-  );
-}
+
+
 
 export default Administrador;
